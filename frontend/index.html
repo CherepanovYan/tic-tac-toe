@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tic-Tac-Toe</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- ==================== AUTH ==================== -->
+
+    <section id="authSection" class="card">
+      <h1>Tic-Tac-Toe</h1>
+
+      <p class="subtitle">
+        Игра в крестики-нолики
+      </p>
+
+      <div class="tabs">
+
+        <button id="loginTab" class="tab active" type="button">
+          Войти
+        </button>
+
+        <button id="signupTab" class="tab" type="button">
+          Регистрация
+        </button>
+
+      </div>
+
+      <form id="authForm">
+
+        <input id="loginInput" type="text" placeholder="Логин" autocomplete="username" required>
+
+        <input id="passwordInput" type="password" placeholder="Пароль" autocomplete="current-password" required>
+
+        <button id="authButton" type="submit">
+          Войти
+        </button>
+
+      </form>
+
+      <div id="authStatus" class="status"></div>
+
+    </section>
+
+    <!-- ==================== MENU ==================== -->
+
+    <section id="menuSection" class="card hidden">
+
+      <div class="header">
+
+        <div>
+          <h1>Tic-Tac-Toe</h1>
+
+          <div id="userInfo" class="user-info"></div>
+        </div>
+
+        <button id="logoutBtn" class="secondary" type="button">
+          Выйти
+        </button>
+
+      </div>
+
+      <div class="menu-buttons">
+
+        <button id="computerGameBtn" type="button">
+          Играть с компьютером
+        </button>
+
+        <button id="playerGameBtn" type="button">
+          Создать игру
+        </button>
+
+        <button id="historyBtn" class="secondary" type="button">
+          История игр
+        </button>
+
+        <button id="leaderboardBtn" class="secondary" type="button">
+          Таблица лидеров
+        </button>
+
+        <button id="refreshGamesBtn" class="secondary" type="button">
+          Обновить игры
+        </button>
+
+      </div>
+
+      <div class="games-section">
+
+        <h2>Доступные игры</h2>
+
+        <div id="gamesList">
+          <p class="empty">
+            Загрузка...
+          </p>
+        </div>
+
+      </div>
+
+      <div id="extraSection" class="extra-section hidden">
+        <div class="extra-header">
+          <h2 id="extraTitle"></h2>
+        </div>
+        <div id="extraContent"></div>
+      </div>
+
+      <div id="menuStatus" class="status"></div>
+
+    </section>
+
+    <!-- ==================== GAME ==================== -->
+
+    <section id="gameSection" class="card hidden">
+
+      <div class="header">
+
+        <div>
+          <h1>Игра</h1>
+
+          <div id="gameId" class="game-id"></div>
+        </div>
+
+        <button id="backBtn" class="secondary" type="button">
+          К меню
+        </button>
+
+      </div>
+
+
+      <div id="gameStatus" class="game-status">
+        Загрузка...
+      </div>
+
+
+      <div id="board" class="board"></div>
+
+
+      <div class="game-actions">
+
+        <button id="refreshGameBtn" class="secondary" type="button">
+          Обновить
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS users (
+    id UUID PRIMARY KEY,
+    login VARCHAR(255) NOT NULL UNIQUE,
+    password TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS games (
+    id UUID PRIMARY KEY,
+    board JSONB NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    game_type VARCHAR(20) NOT NULL DEFAULT 'COMPUTER',
+    userX UUID NOT NULL,
+    userO UUID,
+    CurrentPlayer UUID,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
